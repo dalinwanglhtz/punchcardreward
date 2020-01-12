@@ -6,11 +6,9 @@ public class Solution {
 
 	public static String CalculateReward(int currentPoint, int numJewelry) {
 		int totalPoints = currentPoint + numJewelry;
-		int pointLeft = totalPoints % 6;
 		int freeItems = totalPoints / 6;
-		int payItems = numJewelry - freeItems;
 		
-		return "Point Left: "+pointLeft+". Free Item: "+freeItems+". Pay Item: "+payItems;
+		return "Point Left: "+totalPoints % 6+". Free Item: "+freeItems+". Pay Item: "+(numJewelry - freeItems);
 	}
 
 }
